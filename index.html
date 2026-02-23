@@ -31,7 +31,7 @@
         .logo { 
             width: 200px; 
             height: auto; 
-            margin-bottom: 24px; 
+            margin-bottom: 26px; 
             opacity: 0; /* 初始透明 */
             animation: fadeInUp 1.5s ease-out forwards; /* 播放动画 */
         }
@@ -65,6 +65,31 @@
             }
         }
 
+        /* 7. “进去看看”按钮的静态样式 */
+        .enter-btn {
+            margin-top: 40px; /* 和上面的标语拉开一点距离 */
+            padding: 12px 40px; /* 按钮内部的上下左右留白，决定了按钮的大小 */
+            border: 1px solid #ffffff; /* 1像素的实线白色边框 */
+            color: #ffffff; /* 白色文字 */
+            text-decoration: none; /* 去掉链接自带的难看下划线 */
+            font-size: 14px;
+            letter-spacing: 2px; /* 字间距拉开，显得高级 */
+            border-radius: 4px; /* 四个角稍微带一点圆润，如果喜欢硬汉风格可以改成 0 */
+            background-color: transparent; /* 背景透明 */
+            transition: all 0.3s ease; /* 魔法属性：让后续的颜色变化有 0.3 秒的平滑过渡效果 */
+            
+            /* 延续高级感：让它最后浮现 */
+            opacity: 0;
+            animation: fadeInUp 1.5s ease-out 1s forwards; /* 延迟 1 秒播放动画（Logo是0秒，标语是0.5秒） */
+        }
+
+        /* 8. 按钮的“鼠标悬浮”互动效果 */
+        .enter-btn:hover {
+            background-color: #ffffff; /* 鼠标放上去时，背景变成纯白 */
+            color: #000000; /* 文字变成纯黑 */
+            cursor: pointer; /* 鼠标指针变成小手 */
+        }
+
     </style>
 </head>
 
@@ -73,10 +98,11 @@
     <div class="main-content">
         <img src="logo.png" alt="Thin Red Line Logo" class="logo">
         <div class="slogan">管家式学历提升服务中心</div>
+ <a href=" " class="enter-btn">进去看看</a >
     </div>
 
     <div class="footer">
-        鲁ICP 备13205328399号-1 | 京公网安备DAFU8399号
+        鲁ICP 备13205328399号-1 | 微信：DAFU8399
     </div>
 
 </body>
