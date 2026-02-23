@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>选择专业 - 管家式学历提升</title>
+    
+    <style>
+        /* 1. 基础背景设置，保持高级黑的风格 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* 保证哪怕内容很少，也占满整个屏幕高度 */
+        }
+
+        /* 2. 中间那个像卡片一样的容器 */
+        .form-container {
+            background-color: #111111; /* 比纯黑稍微亮一点点的深灰，做出层次感 */
+            border: 1px solid #333333; /* 细细的边框 */
+            padding: 40px;
+            border-radius: 12px; /* 圆角边框 */
+            width: 80%;
+            max-width: 400px; /* 限制最大宽度，在电脑上也不会拉得太长 */
+            animation: fadeIn 0.8s ease-out; /* 简单的淡入动画 */
+        }
+
+        /* 3. 标题和副标题 */
+        h2 { margin-top: 0; text-align: center; letter-spacing: 2px; }
+        p { color: #888888; text-align: center; font-size: 14px; margin-bottom: 30px; }
+
+        /* 4. 每一个专业选项的框框 */
+        .option-box {
+            border: 1px solid #444444;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            cursor: pointer; /* 鼠标放上去变小手 */
+            transition: all 0.3s; /* 颜色变化的过渡效果 */
+        }
+        
+        /* 鼠标滑过选项时的效果 */
+        .option-box:hover {
+            background-color: #222222;
+            border-color: #666666;
+        }
+
+        /* 隐藏原生的丑陋单选小圆圈，我们直接点击整个框框 */
+        input[type="radio"] {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        /* 让文字也能被点击 */
+        label {
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* 5. 霸气的提交按钮 */
+        .submit-btn {
+            width: 100%; /* 占满卡片宽度 */
+            padding: 16px;
+            margin-top: 20px;
+            background-color: #ffffff; /* 白底黑字，非常醒目 */
+            color: #000000;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* 提交按钮鼠标滑过的效果 */
+        .submit-btn:hover {
+            background-color: #cccccc;
+        }
+
+        /* 动画剧本 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>选择教育机构</h2>
+        <p>为你匹配最适合的提升方案</p >
+
+        
+        <form action="#" method="get">
+            
+            <div class="option-box">
+                <input type="radio" id="cs" name="major" value="计算机科学">
+                <label for="cs">💻 大富学长</label>
+            </div>
+
+            <div class="option-box">
+                <input type="radio" id="bus" name="major" value="工商管理">
+                <label for="bus">📊 翼实教育</label>
+            </div>
+
+            <div class="option-box">
+                <input type="radio" id="edu" name="major" value="教育学">
+                <label for="edu">📚 文途教育</label>
+            </div>
+
+            <button type="submit" class="submit-btn">确认提交</button>
+            
+        </form>
+    </div>
+
+</body>
+</html>
